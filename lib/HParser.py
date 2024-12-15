@@ -97,9 +97,3 @@ class HParser:
                 print(tok.type)
                 print(toklist)
                 raise SyntaxError(f"Unexpected token {tok.value}") 
-
-        va = []
-        for v in self.variables:
-            va.append({v: self.variables[v]})
-
-        print("\n" + str(va))

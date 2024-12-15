@@ -1,5 +1,6 @@
 from lib.const import Token, TokenType, BUILT_IN_KEYWORDS
 from lib.util import is_num
+from lib.HError import *
 
 class HLexer:
 
@@ -83,7 +84,7 @@ class HLexer:
                             self.vars.append(res)
                             continue
                         else:
-                            raise SyntaxError(f"Unexpected token {res}")
+                            HeliumUndefinedToken(res)
                     
                     self.tokens.append(Token(TokenType.KEYWORD, res))
                     continue

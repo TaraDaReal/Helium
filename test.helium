@@ -1,0 +1,4 @@
+define no
+no = 5
+
+logln
